@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>VideoStore Bolivia | DEMO</title>
+
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #0b0b12;
+  color: white;
+}
+
+header {
+  background: linear-gradient(135deg, #17172a, #35105c);
+  padding: 25px 15px;
+  text-align: center;
+}
+
+.logo {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.logo span {
+  color: #b85cff;
+}
+
+header p {
+  margin-top: 8px;
+  color: #ccc;
+}
+
+.demo {
+  background: #ffb000;
+  color: #111;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.hero {
+  text-align: center;
+  padding: 45px 20px;
+}
+
+.hero h1 {
+  font-size: 35px;
+  margin-bottom: 15px;
+}
+
+.hero h1 span {
+  color: #b85cff;
+}
+
+.hero p {
+  color: #bbb;
+  max-width: 600px;
+  margin: auto;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #161622;
+  border: 1px solid #29293d;
+  border-radius: 18px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0,0,0,.3);
+}
+
+.card h2 {
+  margin-bottom: 12px;
+}
+
+.price {
+  font-size: 30px;
+  font-weight: bold;
+  color: #b85cff;
+  margin: 15px 0;
+}
+
+.card p {
+  color: #aaa;
+  margin-bottom: 20px;
+}
+
+button {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  background: #b85cff;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: .85;
+}
+
+.info {
+  margin-top: 35px;
+  background: #141420;
+  border-radius: 15px;
+  padding: 25px;
+  text-align: center;
+  color: #bbb;
+  line-height: 1.6;
+}
+
+footer {
+  margin-top: 50px;
+  padding: 25px;
+  text-align: center;
+  background: #101018;
+  color: #777;
+}
+
+.whatsapp {
+  background: #25D366;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">🎬 Video<span>Store</span> Bolivia</div>
+  <p>Videos y paquetes digitales</p>
+</header>
+
+<div class="demo">
+  🧪 PÁGINA DEMO — NO SE REALIZAN COBROS REALES
+</div>
+
+<section class="hero">
+  <h1>🎬 Elige tu <span>video</span></h1>
+  <p>
+    Selecciona una opción y contáctanos por WhatsApp.
+    Esta página es solamente una demostración.
+  </p>
+</section>
+
+<div class="container">
+
+  <div class="products">
+
+    <div class="card">
+      <h2>🎬 1 Video</h2>
+      <p>Video individual</p>
+      <div class="price">Bs. 10</div>
+
+      <button onclick="contactar('1 video - Bs. 10')">
+        📲 Comprar
+      </button>
+    </div>
+
+    <div class="card">
+      <h2>🎬 Pack x5</h2>
+      <p>5 videos</p>
+      <div class="price">Bs. 40</div>
+
+      <button onclick="contactar('Pack de 5 videos - Bs. 40')">
+        📲 Comprar
+      </button>
+    </div>
+
+    <div class="card">
+      <h2>📦 Paquete completo</h2>
+      <p>Paquete especial</p>
+      <div class="price">Bs. 100</div>
+
+      <button onclick="contactar('Paquete completo - Bs. 100')">
+        📲 Comprar
+      </button>
+    </div>
+
+  </div>
+
+  <div class="info">
+    <h2>📱 ¿Quieres información?</h2>
+    <p>
+      Pulsa el botón para abrir WhatsApp y enviarnos un mensaje.
+    </p>
+
+    <br>
+
+    <button class="whatsapp" onclick="contactar('Quiero información')">
+      💬 Contactar por WhatsApp
+    </button>
+  </div>
+
+</div>
+
+<footer>
+  © 2026 VideoStore Bolivia — Página de demostración
+</footer>
+
+<script>
+
+function contactar(producto) {
+
+  const telefono = "59163862730";
+
+  const mensaje =
+    "Hola 👋, estoy interesado en: " +
+    producto +
+    ". Vi la página demo.";
+
+  const url =
+    "https://wa.me/" +
+    telefono +
+    "?text=" +
+    encodeURIComponent(mensaje);
+
+  window.open(url, "_blank");
+}
+
+</script>
+
+</body>
+</html>
